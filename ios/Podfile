@@ -29,6 +29,8 @@ target 'GreenaryMart' do
 
   pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
 
+  pod 'react-native-shimmer', :path => '../node_modules/react-native-shimmer'
+
   target 'GreenaryMartTests' do
     inherit! :search_paths
     # Pods for testing

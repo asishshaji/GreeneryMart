@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import {View, ScrollView, StyleSheet, Text} from 'react-native';
-import Header from '../components/Header';
 import OfferScroll from '../components/OfferScroll';
 import ProductCarousel from '../components/ProductCarousel';
-import FeatureComp from '../components/FeatureComp';
 import firebase from 'react-native-firebase';
 
 class HomeScreen extends Component {
@@ -15,12 +13,13 @@ class HomeScreen extends Component {
     this.ref = firebase.firestore().collection('Offers');
   }
   componentDidMount() {
-    this.ref.onSnapshot(querySnapshot => {   this.setState({
-      entries: []
-    });
+    this.ref.onSnapshot(querySnapshot => {
+      this.setState({
+        entries: [],
+      });
       querySnapshot.forEach(doc => {
         this.setState({
-          entries: this.state.entries.concat(doc.data())
+          entries: this.state.entries.concat(doc.data()),
         });
       });
     });
@@ -40,7 +39,7 @@ class HomeScreen extends Component {
           <View style={{marginTop: 10}}>
             <ProductCarousel navigation={this.props.navigation} />
           </View>
-          <Text
+          {/* <Text
             style={{
               fontSize: 20,
               fontWeight: 'bold',
@@ -66,9 +65,8 @@ class HomeScreen extends Component {
               image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCgvxrQ930gpa28wFRSXOjxqHI-r91Ey8YCDGP7_MmSkv3ngLzWQ"
               name="Mushroom"
             />
-          </View>
+          </View> */}
         </ScrollView>
-        <Header />
       </View>
     );
   }

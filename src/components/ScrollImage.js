@@ -1,23 +1,22 @@
-import React from "react";
-import { View, Text, Image } from "react-native";
+import React from 'react';
+import {View, Text, Image} from 'react-native';
 
 const ScrollImage = props => (
   <View
     style={{
       height: props.height, //150
-      backgroundColor: "#fff",
+      backgroundColor: '#fff',
       margin: 10,
       width: props.width, //200
-      elevation: 2,
-      borderRadius: 10
-    }}
-  >
+      elevation: 15,
+      borderRadius: 10,
+    }}>
     <Image
-      style={{ flex: 1, borderRadius: 10 }}
+      style={{flex: 1, borderRadius:5}}
       source={{
-        uri:
-          props.image
+        uri: props.image,
       }}
+      resizeMode='stretch'
     />
   </View>
 );

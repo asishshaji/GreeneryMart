@@ -13,12 +13,12 @@ const ProCarComp = props => (
           right: 20,
           backgroundColor: "#fff",
           borderRadius: 10,
-          padding: 5,
-          elevation: 2
+          padding: 4,
+          elevation: 4
         }}
       >
-        <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-          Mushroom
+        <Text style={{ textAlign: "center", fontFamily:'ProductSans-Regular' ,fontSize:16 }}>
+          {props.title}
         </Text>
       </View>
       <View

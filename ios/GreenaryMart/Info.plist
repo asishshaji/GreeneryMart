@@ -71,6 +71,10 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>ProductSans-Black.ttf</string>
+		<string>ProductSans-BoldItalic.ttf</string>
+		<string>ProductSans-Medium.ttf</string>
+		<string>ProductSans-Regular.ttf</string>
 	</array>
 </dict>
 </plist>

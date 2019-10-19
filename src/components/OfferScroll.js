@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {View, Text, Image, ScrollView, Dimensions} from 'react-native';
 import ScrollImage from './ScrollImage';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
-import firebase from 'react-native-firebase';
 
 class OfferScroll extends Component {
   state = {
@@ -29,11 +28,11 @@ class OfferScroll extends Component {
           right: 10,
         }}
         dotStyle={{
-          width: 10,
-          height: 10,
+          width: 8,
+          height: 8,
           borderRadius: 5,
           marginHorizontal: 8,
-          backgroundColor: 'rgba(255, 255, 255, 0.92)',
+          backgroundColor: '#000',
         }}
         inactiveDotStyle={
           {
@@ -47,7 +46,7 @@ class OfferScroll extends Component {
   }
   render() {
     return (
-      <View style={{height: 280, backgroundColor: '#45be74'}}>
+      <View style={{height: 280}}>
         <Carousel
           data={this.props.entries}
           sliderWidth={Dimensions.get('window').width - 10}
